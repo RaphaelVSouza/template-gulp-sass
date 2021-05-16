@@ -18,17 +18,17 @@
   }
 
   .sass {
-    @include text-link(#cc6699)
+    @include text-link($pink-sass)
 
   }
 
   .eslint {
-    @include text-link(#432eff)
+    @include text-link($blue-eslint)
 
   }
 
   .prettier {
-    @include text-link(#ff9f46)
+    @include text-link($orange-prettier)
 
   }
 
