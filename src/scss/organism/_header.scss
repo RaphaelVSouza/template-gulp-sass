@@ -1,0 +1,42 @@
+
+.o-header {
+  padding: 2rem;
+  background-color: $white;
+  width: 100vw;
+  border-bottom: 2px solid $black;
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-right: 1rem;
+  }
+
+  &__gulpIcon {
+    width: 4rem;
+
+    &:hover {
+      animation: shake 2.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+}
+
+@keyframes shake {
+  0% { transform:  rotate(0deg); }
+  10% { transform: rotate(-3deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(0deg); }
+  40% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  60% { transform: rotate(0deg); }
+  70% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(-3deg); }
+}

@@ -1,0 +1,49 @@
+.o-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 60rem;
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 4rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .sass {
+    @include text-link(#cc6699)
+
+  }
+
+  .eslint {
+    @include text-link(#432eff)
+
+  }
+
+  .prettier {
+    @include text-link(#ff9f46)
+
+  }
+
+  &__image {
+    width: 15rem;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+    transition: all 0.3s;
+    box-shadow: 0;
+
+    &:hover {
+      box-shadow: 0 0 4px #515151;
+      transform: scale(1.1);
+      filter: blur(0.8px);
+
+    }
+  }
+}
