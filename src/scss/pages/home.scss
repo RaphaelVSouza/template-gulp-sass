@@ -2,3 +2,7 @@
 @import '../organism/header';
 @import '../organism/content';
 @import '../organism/footer';
+
+body {
+ height: 100vh;
+}
