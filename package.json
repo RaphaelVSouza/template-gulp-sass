@@ -6,25 +6,29 @@
   "type": "module",
   "scripts": {
     "serve": "gulp",
-    "resize": "node ./utils/jimp.js"
+    "resize": "node ./utils/jimp.js",
+    "lint": "eslint --fix --ext .js --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "jimp": "^0.16.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^2.0.1",
     "node-sass": "^6.0.0",
-    "prettier": "^2.3.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^2.0.0",
-    "jimp": "^0.16.1"
-  },
-  "dependencies": {}
+    "prettier": "^2.3.0"
+  }
 }
