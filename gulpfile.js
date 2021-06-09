@@ -44,20 +44,6 @@ export function compileSass() {
     .pipe(browserSync.stream());
 }
 
-export function browserWatch() {
-  browserSync.init({
-    startPath: path.otherPaths.startDir,
-    server: {
-      baseDir: path.otherPaths.baseDir,
-    },
-  });
-
-  gulp.watch(path.input.scss, compileSass);
-  gulp.watch(path.input.js, minifyJs);
-  gulp.watch(path.input.img, minifyImage);
-  gulp.watch(path.otherPaths.html).on('change', browserSync.reload);
-}
-
 export function minifyJs() {
   return gulp
     .src(path.input.js)
@@ -72,6 +58,20 @@ export function minifyImage() {
     .pipe(imagemin())
     .pipe(gulp.dest(path.output.img))
     .pipe(browserSync.stream());
+}
+
+export function browserWatch() {
+  browserSync.init({
+    startPath: path.otherPaths.startDir,
+    server: {
+      baseDir: path.otherPaths.baseDir,
+    },
+  });
+
+  gulp.watch(path.input.scss, compileSass);
+  gulp.watch(path.input.js, minifyJs);
+  gulp.watch(path.input.img, minifyImage);
+  gulp.watch(path.otherPaths.html).on('change', browserSync.reload);
 }
 
 export default gulp.parallel(browserWatch, minifyJs, compileSass, minifyImage);
