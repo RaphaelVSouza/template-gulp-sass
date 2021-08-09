@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 60rem;
 
   &__title {
     text-align: center;
@@ -18,18 +17,15 @@
   }
 
   .sass {
-    @include text-link($pink-sass)
-
+    @include text-link($pink-sass);
   }
 
   .eslint {
-    @include text-link($blue-eslint)
-
+    @include text-link($blue-eslint);
   }
 
   .prettier {
-    @include text-link($orange-prettier)
-
+    @include text-link($orange-prettier);
   }
 
   &__image {
@@ -43,7 +39,6 @@
       box-shadow: 0 0 4px #515151;
       transform: scale(1.1);
       filter: blur(0.8px);
-
     }
   }
 }
