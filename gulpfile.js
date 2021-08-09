@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import sass from 'gulp-sass';
+import sass from 'gulp-dart-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import browserSyncModule from 'browser-sync';
 import terser from 'gulp-terser';
@@ -37,11 +37,7 @@ const path = {
 export function compileSass() {
   return gulp
     .src(path.input.scss)
-    .pipe(
-      sass({
-        outputStyle: 'compressed',
-      }),
-    )
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(
       autoprefixer({
         cascade: false,
