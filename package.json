@@ -6,11 +6,7 @@
   "type": "module",
   "scripts": {
     "serve": "gulp",
-    "resize": "node ./utils/jimp.js",
     "lint": "eslint --fix --ext .js --ignore-path .gitignore ."
-  },
-  "dependencies": {
-    "jimp": "^0.16.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
